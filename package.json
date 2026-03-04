@@ -1,0 +1,24 @@
+{
+  "name": "caelus-proximity-voice-chat",
+  "version": "1.0.0",
+  "description": "Caelus Revival 2020 Proximity Voice Chat",
+  "main": "server.js",
+  "bin": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build:exe": "pkg . --targets node18-win-x64 --output dist/caelus-proximity-voice-chat.exe"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.1"
+  },
+  "pkg": {
+    "assets": [
+      "public/**/*"
+    ]
+  }
+}
