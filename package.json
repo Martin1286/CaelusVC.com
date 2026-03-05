@@ -1,0 +1,30 @@
+{
+  "name": "caelus-proximity-voice-chat",
+  "version": "1.0.0",
+  "description": "Caelus Revival 2020 Proximity Voice Chat",
+  "main": "server.js",
+  "bin": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build:exe": "pkg . --targets node18-win-x64 --output dist/caelus-proximity-voice-chat.exe",
+    "tunnel:run": "cloudflared tunnel --config cloudflare/config.yml run",
+    "tunnel:quick": "powershell -ExecutionPolicy Bypass -File scripts/start-cloudflare-quick-tunnel.ps1",
+    "start:pc-host": "powershell -ExecutionPolicy Bypass -File scripts/start-caelus-with-tunnel.ps1",
+    "start:quick-public": "powershell -ExecutionPolicy Bypass -File scripts/start-caelus-with-quick-tunnel.ps1",
+    "cloudflare:setup": "powershell -ExecutionPolicy Bypass -File scripts/setup-cloudflare-tunnel.ps1"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.1"
+  },
+  "pkg": {
+    "assets": [
+      "public/**/*"
+    ]
+  }
+}

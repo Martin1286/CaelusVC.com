@@ -1,0 +1,11 @@
+tunnel: fd706d83-0d9f-4bfb-892f-614deaaf9763
+credentials-file: C:\Users\lospash\.cloudflared\fd706d83-0d9f-4bfb-892f-614deaaf9763.json
+
+ingress:
+  - hostname: caelusvc.vc
+    service: http://localhost:3000
+  - hostname: www.caelusvc.vc
+    service: http://localhost:3000
+  - service: http_status:404
+
+

@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: caelusvc
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: PUBLIC_BASE_URL
+        value: https://caelusvc.onrender.com
+      - key: ENFORCE_PUBLIC_HOST
+        value: true
+      - key: TRUST_PROXY
+        value: true

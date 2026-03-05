@@ -1,0 +1,10 @@
+tunnel: YOUR_TUNNEL_UUID
+credentials-file: C:\Users\YOUR_WINDOWS_USER\.cloudflared\YOUR_TUNNEL_UUID.json
+
+ingress:
+  - hostname: caelusvc.vc
+    service: http://localhost:3000
+  - hostname: www.caelusvc.vc
+    service: http://localhost:3000
+  - service: http_status:404
+
